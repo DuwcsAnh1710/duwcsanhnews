@@ -1,0 +1,78 @@
+{
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1200px"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "paper",
+          "name": "Giấy",
+          "color": "#fffefa"
+        },
+        {
+          "slug": "ink",
+          "name": "Mực",
+          "color": "#1e2425"
+        },
+        {
+          "slug": "brick",
+          "name": "Đỏ gạch",
+          "color": "#a72820"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "serif",
+          "name": "Chữ tạp chí",
+          "fontFamily": "Georgia, serif"
+        },
+        {
+          "slug": "sans",
+          "name": "Chữ giao diện",
+          "fontFamily": "Arial, sans-serif"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|serif",
+          "lineHeight": "1.15"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "inherit"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "area": "header",
+      "title": "Đầu trang"
+    },
+    {
+      "name": "footer",
+      "area": "footer",
+      "title": "Chân trang"
+    }
+  ]
+}
