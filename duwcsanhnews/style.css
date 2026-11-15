@@ -1,0 +1,88 @@
+/*
+Theme Name: DuwcsAnh News
+Version: 1.1.0
+Requires at least: 6.6
+Requires PHP: 7.4
+Text Domain: duwcsanhnews
+*/
+:root{--rule:#c9c7bb;--accent:var(--wp--preset--color--brick)}
+body{margin:0;overflow-wrap:break-word}
+.wp-site-blocks>header,.dan-main,.footer-inner{width:min(1200px,92%);margin-inline:auto}
+.brand-row,.byline,.cover{display:flex;gap:1.5rem}
+.brand-row{align-items:center;justify-content:space-between;padding-block:1.25rem;border-bottom:3px solid}
+.masthead,.footer-inner .wp-block-site-title{font: bold clamp(2rem,5vw,4.75rem)/1 Georgia,serif;letter-spacing:-.065em;margin:0}
+.masthead a,.wp-block-post-title a,.wp-block-site-title a,.wp-block-post-terms a{text-decoration:none}
+header nav{border-bottom:1px solid var(--rule);padding-block:.35rem}
+.wp-block-navigation-item__content{padding:.65rem .25rem}
+header .wp-block-search{max-width:15rem;margin:0}
+.wp-block-search__input,.wp-block-search__button{min-height:44px}
+.wp-block-search__button{background:var(--accent);color:white;border:0}
+.dan-main{padding-block:2rem 4rem}
+.dan-main>h2{border-top:2px solid;padding-top:.8rem;margin-top:3rem;font-size:clamp(1.8rem,3vw,2.75rem)}
+.dan-main>h1{font-size:clamp(2.2rem,5vw,4rem);margin:0 0 1rem}
+.cover{align-items:flex-start}.cover>*{min-width:0}.cover>.lead{flex:2.2}.cover>.briefs{flex:1;margin:0;border-left:1px solid var(--rule);padding-left:1.5rem}
+.cards .wp-block-post-template{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 1.5rem}
+.wp-block-post-template>li{margin-block-start:0}
+.wp-block-post-featured-image{margin:0}.wp-block-post-featured-image img{width:100%;display:block}
+.wp-block-post-terms{color:var(--accent);font:bold .8rem/1.5 Arial,sans-serif;letter-spacing:.045em;margin:.75rem 0 .35rem}
+.wp-block-post-title{margin:.25rem 0;font-size:clamp(1.35rem,2vw,1.9rem)}
+.lead .wp-block-post-title,.reading h1{font-size:clamp(2rem,4vw,3.8rem)}
+.briefs img{max-height:10rem;object-fit:cover}.briefs li+li{margin-top:1rem}
+.reading{max-width:720px;margin:auto}.reading .wp-block-post-content{font:1.17rem/1.75 Georgia,serif}
+.byline{font-size:.9rem;align-items:center;margin-block:1rem}.byline>*{margin:0}
+footer{border-top:3px solid;padding:2rem 0}.footer-inner .wp-block-site-title{font-size:2rem}
+a:hover{text-decoration:underline;color:var(--accent)}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:850px){.cards .wp-block-post-template{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.brand-row{flex-wrap:wrap;gap:.75rem}.cover{display:block}.cover>.briefs{margin-top:1.5rem;padding:1rem 0 0;border-left:0;border-top:1px solid var(--rule)}.cards .wp-block-post-template{grid-template-columns:1fr}.wp-block-navigation__responsive-container-open{min-height:44px;min-width:44px}header .wp-block-search{max-width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Newspaper front page */
+.brand-row {
+    padding-block: 1.1rem;
+    border-top: 4px solid var(--accent);
+    border-bottom: 1px solid var(--rule);
+}
+.masthead { color: var(--accent); font-style: italic; font-size: clamp(2.2rem,4vw,3.65rem); }
+header nav { font-weight: 700; font-size: .95rem; border-bottom: 2px solid; }
+header .wp-block-search__input { border: 1px solid var(--rule); background: transparent; padding-inline: .8rem; }
+header .wp-block-search__button { margin: 0; }
+.dan-main { padding-top: 1.5rem; }
+.home .dan-main > h1 {
+    display: flex; align-items: center; gap: .7rem; margin: 0 0 1rem;
+    color: var(--accent); font: 750 .9rem/1.4 Arial,sans-serif;
+    letter-spacing: .08em; text-transform: uppercase;
+}
+.home .dan-main > h1::before { content: ''; width: 1.8rem; height: 3px; background: currentColor; }
+.cover { display: grid; grid-template-columns: minmax(0,2.65fr) minmax(0,1.2fr) minmax(0,1fr); gap: 1.5rem; }
+.cover > .briefs { border: 0; padding: 0; margin: 0; }
+.cover > .editor-desk { margin: 0; padding-left: 1.25rem; border-left: 1px solid var(--rule); }
+.editor-desk > h2 { margin: 0; padding-bottom: .8rem; border-bottom: 3px solid var(--accent); font: bold 1.3rem/1.25 Georgia,serif; }
+.editor-desk .wp-block-post-template { counter-reset: picks; }
+.editor-desk li { counter-increment: picks; position: relative; padding: .75rem 0 1rem 2.15rem; border-bottom: 1px solid var(--rule); }
+.editor-desk li::before { content: counter(picks,decimal-leading-zero); position: absolute; left: 0; top: .95rem; font: italic 1.45rem Georgia,serif; color: var(--accent); }
+.editor-desk .wp-block-post-title { font-size: 1.16rem; }
+.cover .wp-block-post-featured-image img { aspect-ratio: 16 / 10 !important; object-fit: cover; max-height: none; }
+.cover .wp-block-post-terms,.cards .wp-block-post-terms { text-transform: uppercase; font-size: .75rem; letter-spacing: .06em; }
+.lead .wp-block-post-title { font-size: clamp(1.85rem,2.8vw,2.8rem); letter-spacing: -.035em; text-wrap: pretty; }
+.lead .wp-block-post-excerpt { line-height: 1.55; color: #424a4b; margin-top: .6rem; }
+.briefs .wp-block-post-title { font-size: clamp(1.18rem,1.55vw,1.55rem); }
+.wp-block-post-date { color: #555e60; font: .8rem/1.5 Arial,sans-serif; margin-top: .55rem; }
+.cards .wp-block-post-title { font-size: clamp(1.25rem,1.8vw,1.65rem); }
+.dan-main > h2 { font-size: clamp(1.6rem,2.4vw,2.1rem); letter-spacing: -.03em; }
+.reading .wp-block-post-title { line-height: 1.08; letter-spacing: -.035em; }
+.reading > .wp-block-post-excerpt { font-size: 1.18rem; }
+@media (max-width: 980px) {
+    .cover { grid-template-columns: minmax(0,1.8fr) minmax(0,1fr); }
+    .cover > .editor-desk { grid-column: 1 / -1; border: 0; padding: 0; }
+    .desk-list .wp-block-post-template { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+}
+@media (max-width: 600px) {
+    .brand-row { gap: .5rem; }
+    .brand-row .wp-block-search { width: 100%; }
+    .cover { display: block; }
+    .cover > .briefs,.cover > .editor-desk { margin-top: 1.25rem; }
+    .briefs li { display: grid; grid-template-columns: minmax(6.5rem,32%) 1fr; column-gap: .85rem; border-top: 1px solid var(--rule); padding-top: .85rem; }
+    .briefs .wp-block-post-featured-image { grid-row: 1 / 4; }
+    .briefs .wp-block-post-terms,.desk-list .wp-block-post-terms { margin-top: 0; }
+    .desk-list .wp-block-post-template { display: block; }
+    .cards .wp-block-post-template { gap: 1.5rem; }
+}
